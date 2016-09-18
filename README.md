@@ -18,8 +18,14 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	
-	TaskScript, es un programa que genera una lista de "pendientes"
-	según los comentarios de tus archivos fuente.
+
+## Qué es?? ##
+** TaskScript, es un programa que genera una lista de "pendientes" según los comentarios de tus archivos fuente. **
+
+## Por qué existe??##
+Es una funcionalidad disponible en muchos IDE y editores avanzados que, por alguna razón, no tenía mi editor favrito.
+Muchos dirán que "por qué no uso Sublime Text??".. Yo les diré que vayan a c*gar..
+Vi la oportunidad de hacerlo y lo hice en mi tiempo libre. Ahora te lo comparto, usalo si les va.
 	
 ## Requisitos para instalarle: ##
 - Notepad++ instalado (obviamente).
@@ -46,3 +52,9 @@ sino, seguí leyendo cual es la onda.
 9. IMPORTANTE: a partir de ahí, tu NP++ va a parecer poseído por un bicho, no te asustes, es normal. (Dije que esto no tiene garantía, no??).
 10. "Automágicamente" se va a crear la dichosa listita de pendientes.
 11. Mandame guita.
+
+## Otra aclaración: ##
+Lo hago en mi tiempo libre, el que tengo poco, por estudiar Ingeniería en Sistemas.
+Adónde voy con esto??
+La idea es que lo pruebes y me avises si tiene un error, que voy a corregir cuando pueda y quiera (casi siempre quiero). Así que no te me rompas las b*las si no lo hago.
+Tengo pensada algunas funcionalidades para hacerlo más útil al programa, pero me acordé que tenía rendir y hacer otras cosas, por eso lo dejo así. En algún momento se las voy a agregar
