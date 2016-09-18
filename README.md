@@ -23,9 +23,11 @@
 ** TaskScript, es un programa que genera una lista de "pendientes" según los comentarios de tus archivos fuente. **
 
 ## Por qué existe??##
-Es una funcionalidad disponible en muchos IDE y editores avanzados que, por alguna razón, no tenía mi editor favrito.
+Es una funcionalidad disponible en muchos IDE y editores avanzados que, por alguna razón, no tenía mi editor favorito.
+
 Muchos dirán que "por qué no uso Sublime Text??".. Yo les diré que vayan a c*gar..
-Vi la oportunidad de hacerlo y lo hice en mi tiempo libre. Ahora te lo comparto, usalo si les va.
+
+Vi la oportunidad de hacerlo y lo hice en mi tiempo libre. Ahora te lo comparto, usalo si te va.
 	
 ## Requisitos para instalarle: ##
 - Notepad++ instalado (obviamente).
