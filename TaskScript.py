@@ -1,20 +1,45 @@
-﻿import xml.etree.ElementTree as ET
+﻿"""
+	TaskScript, es un programa que genera una lista de "pendientes"
+	según los comentarios de los archivos fuentes.
+    Copyright © 2016  Gabriel Agustín Véntola
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
+__author__ = "Gabriel Véntola"
+__copyright__ = "Copyright 2016, TaskScript, Gabriel Véntola"
+__credits__ = "Félix Barros"
+__license__ = "GPL"
+__version__ = "1.0 (beta)"
+__maintainer__ = "Gabriel Véntola"
+
+import xml.etree.ElementTree as ET
 import os.path
 from numbers import Number
-script = "Tuto's taskScript v1 Beta"
+script = "TaskScript"
 
 # ----------------------------------- subacciones ------------------------------------
 def obtenerProyecto():
 
 	def obtenerPath(msj):
-		ruta = notepad.prompt(msj, script)
+		ruta = notepad.prompt(msj, script + ' ' + __version__)
 		if ruta:
 			if not os.path.exists(ruta):
 				return obtenerPath('Metele de vuelta, porque nada que ver lo que pusiste')
 		return ruta
 		
 	def obtenerArch(ruta):
-		pro = notepad.prompt("Poné el nombre del archivo de ubicación".decode('utf8').encode('latin1'), script)
+		pro = notepad.prompt("Poné el nombre del archivo de ubicación".decode('utf8').encode('latin1'), script + ' ' + __version__)
 		if pro:
 			try:
 				return ET.parse(ruta + '/' + pro).getroot()
@@ -123,7 +148,15 @@ def modifLista(lista, archLista, fuente):
 	
 # ---------------------------------- fin subacciones --------------------------------
 console.clear()
-console.write(script + ', reservados todos los derechos\r\n')
+console.write(script + ' Copyright © 2016  Gabriel Agustín Véntola\r\n' + 
+    'This program comes with ABSOLUTELY NO WARRANTY; for details go to "LICENSE"' +
+	'or the "README.md" file.\r\n' + 'This is LIBRE software, and you are welcome ' +
+	'to redistribute it under certain conditions detailed en the "LICENSE" file.\r\n\r\n' +
+	'Este programa viene SIN GARANTÍA ALGUNA, lo usás BAJO TU PROPIO RIESGO; ' +
+	'para más detalles, leé el archivo "README.md" o el "LICENSE".\r\n' +
+	'Esto es software LIBRE, y podés redistribuirlo bajo las condiciones detalladas' +
+	'en el archivo "LICENCE".\r\n')
+	
 a = 0
 path, raiz = obtenerProyecto()
 # if not isinstance(raiz, Number):
