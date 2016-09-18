@@ -1,9 +1,9 @@
 # TaskScript
 
-"""
-	TaskScript, es un programa que genera una lista de "pendientes"
-	según los comentarios de los archivos fuentes.
-    Copyright © 2016  Gabriel Agustín Véntola
+	Copyright © 2016  Gabriel Agustín Véntola.
+	
+	TaskScript is a program that generates a todo list from the comments
+	on you source files.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,4 +17,15 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-"""
+	
+	TaskScript, es un programa que genera una lista de "pendientes"
+	según los comentarios de tus archivos fuente.
+	
+	Requisitos para instalarlo:
+	· Notepad++ instalado (obviamente).
+	· Pythonscript instalado (version 0.9.2.0).
+	
+	Pasos para instalarlo:
+	1. Descargá el programa desde https://github.com/tutoGav/TaskScript.
+	2. Colocá el archivo TaskScript.py en la carpeta /Users/[tu usuario]/AppData/Roaming/Notepad++/plugins/config/PythonScript/scripts/TaskScript.
+	3. Abrí Notepad++ y agregá el script desde Plugins>Python Script>Configuration.
