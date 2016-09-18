@@ -36,7 +36,7 @@ Vi la oportunidad de hacerlo y lo hice en mi tiempo libre. Ahora te lo comparto,
 2. Colocá el archivo TaskScript.py en la carpeta /Users/[tu usuario]/AppData/Roaming/Notepad++/plugins/config/PythonScript/scripts/TaskScript.
 3. Abrí Notepad++ y agregá el script desde Plugins>Python Script>Configuration.
 
-## Cómo se usa??: ##
+## Cómo se usa?? ##
 Antes que nada, una aclaración: el coso este funciona en base a
 "archivos de ubicación". Si sabés lo que son, no hay nada que leer;
 sino, seguí leyendo cual es la onda.
@@ -57,4 +57,5 @@ sino, seguí leyendo cual es la onda.
 Lo hago en mi tiempo libre, el que tengo poco, por estudiar Ingeniería en Sistemas.
 Adónde voy con esto??
 La idea es que lo pruebes y me avises si tiene un error, que voy a corregir cuando pueda y quiera (casi siempre quiero). Así que no te me rompas las b*las si no lo hago.
-Tengo pensada algunas funcionalidades para hacerlo más útil al programa, pero me acordé que tenía rendir y hacer otras cosas, por eso lo dejo así. En algún momento se las voy a agregar
+Tengo pensada algunas funcionalidades para hacerlo más útil al programa y menos restrictivo con lo de los "archivos de ubicación" (fue una buena restricción de inicio para
+empezar rápido; y, además te obligo a que trabajes ordenado no dejes fuentes desparramadas por tu computadora), pero me acordé que tenía rendir y hacer otras cosas, por eso lo dejo así. En algún momento se las voy a agregar
