@@ -1,4 +1,7 @@
 ﻿"""
+5 tareas encontradas en los siguientes archivos:
+
+Proyecto: Prueba. Tareas: 5
 	TaskScript, es un programa que genera una lista de "pendientes"
 	según los comentarios de los archivos fuentes.
     Copyright © 2016  Gabriel Agustín Véntola
@@ -32,7 +35,7 @@ script = "TaskScript"
 def obtenerProyecto():
 
 	def obtenerPath(msj):
-		ruta = notepad.prompt(msj, script + ' ' + __version__)
+		ruta = notepad.prompt(msj, script + ' ' + __version__).replace('\\', '/')
 		if ruta:
 			if not os.path.exists(ruta):
 				return obtenerPath('Metele de vuelta, porque nada que ver lo que pusiste')
@@ -120,6 +123,7 @@ def modifLista(lista, archLista, fuente):
 	editor.delLineLeft()
 	editor.tab()
 	editor.addText(fuente)
+	
 	editor.newLine()
 	# agrego primer linea (cuestiones estéticas)
 	editor.addText(tareas[0])
@@ -127,7 +131,7 @@ def modifLista(lista, archLista, fuente):
 	editor.delWordLeft()
 	editor.newLine()
 	editor.tab()
-	editor.addText(str(i).zfill(2))
+	editor.addText(str(i).zfill(2) + ' ')
 	editor.documentEnd()
 	editor.newLine()
 	tareas.pop(0)
@@ -138,14 +142,34 @@ def modifLista(lista, archLista, fuente):
 		editor.gotoPos(editor.getLineIndentPosition(editor.lineFromPosition(editor.getCurrentPos() - 1)))
 		editor.delWordLeft()
 		editor.newLine()
-		editor.addText(str(i).zfill(2))
+		editor.addText(str(i).zfill(2) + ' ')
 		editor.documentEnd()
 		i += 1
 	del tareas[:]
 
 	editor.delLineRight()
 	return i - 1
-	
+
+# HACER: terminar el callback
+def ir(args):
+	if 'Tareas.txt' in notepad.getCurrentFilename():
+		com = ''
+		if (not ':/' in editor.getCurLine()) and (not ':\\' in editor.getCurLine()):
+			com = editor.getCurLine()[5:-2]
+			num = int(editor.getCurLine()[2:4])
+			editor.gotoLine(editor.lineFromPosition(editor.getCurrentPos()) - num)
+		ar = editor.getCurLine()[1:-2]
+		notepad.open(ar)
+		console.write(com)
+		editor.searchNext(0, com)
+
+def hint(args):
+	editor.callTipShow(450, 'Doble click y te vas allá')
+	editor.callTipSetHlt(0, 11)
+
+def esconder(args):
+	editor.callTipCancel()
+
 # ---------------------------------- fin subacciones --------------------------------
 console.clear()
 console.write(script + ' Copyright © 2016  Gabriel Agustín Véntola\r\n' + 
@@ -182,4 +206,10 @@ if path:
 	editor.addText(str(a) + ' tareas encontradas en los siguientes archivos:\r\n')
 	editor.documentEnd()
 	notepad.save()
+	editor.setMouseDwellTime(1500)
+	# editor.callTipShow(450, 'Doble click y te vas ahí')
+	# editor.callTipSetHlt(0, 11)
 console.write('Opáma programa!!')
+editor.callback(ir, [SCINTILLANOTIFICATION.DOUBLECLICK])
+editor.callback(hint, [SCINTILLANOTIFICATION.DWELLSTART])
+editor.callback(esconder,[SCINTILLANOTIFICATION.DWELLEND])
